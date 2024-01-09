@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario Para vender veiculos</title>
+</head>
+<body>
+	<!-- Header-->
+<div class="container">
+	<div class="header">
+		<h3 class="t1">Cadastre seu veiculo para vender mais rapido!</h3>
+	</div>
+	<!-- Formulario-->
+	<div class="form-container">
+		<div class="form-header">
+			<p class="cad">CADASTRO</p>
+		</div>
+		<!-- titulo do anuncio-->
+		<form action="form.php" method="post"><!-- action é para onde o formulario vai e method e post para enviar para servidor e get pegar do servidor-->
+		<div class="box">
+			<h1 class="venda">Venda facil seu veiculo!</h1>
+			<p class="desc">Descreva as características do seu veículo e marque todas os opicionais e características que ele possui</p>
+			 <p class="titu">Titulo do anuncio:<span class="req">*</span></p>
+			<input type="text" name="titulo-anuncio" size="50" required placeholder="Insira o titulo do anuncio" minlength="1" maxlength="25" id="titulo"><!-- id é utilizado para referencias no css ou java script, parecido com class-->
+		</div>
+		<!-- Preço do carro-->
+		<div class="box">
+			 <label for="preço" class="titu">Preço do Carro:<span class="req">*</span></label><!--label é utilizado para refenciar o texto com input, o input possui um name por exemplo preco e o label tem um for preco tbm-->
+			<input type="number" name="preco" size="40" required minlength="1" maxlength="20" value="R$">
+		</div>
+		<!--descrição-->
+	    <div class="box">
+			 <p class="titu">Descrição:<span class="req">*</span></p>
+			 <textarea class="Descrição" rows="10" cols="60" minlength="1" maxlength="400" required placeholder="Descreva seu veiculo..."></textarea>
+		</div>
+		<!-- Unico dono-->
+		<div class="box">
+			 <p class="titu">Único dono?<span class="req">*</span></p>
+			 <select id="unico" name="unico" required>
+			 	<option value="">Selecione...</option>
+			 	<option value="0">Sim</option> <!-- os values normalmente são utilizados 0 pra falso e 1 pra verdadeiro usado no back end-->
+			 	<option value="1">Não</option>
+			 </select>
+		</div>
+		<!--marca-->
+		<div class="box">
+			 <p class="titu">Marca:<span class="req">*</span></p>
+			<input type="text" name="Marca" id="marca" size="50" required placeholder="Insira a marca do seu carro:" minlength="1" maxlength="25">
+		</div>
+		<!--modelo-->
+		<div class="box">
+			 <p class="titu">Modelo:<span class="req">*</span></p>
+			<input type="text" name="Modelo" id="modelo" size="50" required placeholder="Insira o modelo do seu carro:" minlength="1" maxlength="25">
+		</div>
+		<!--Quilometragem-->
+		<div class="box">
+			 <p class="titu">Quilometragem:<span class="req">*</span></p>
+			<input type="text" name="quilo" id="marca" size="50" required placeholder="Insira quilometragem do seu carro:" minlength="1" maxlength="25">
+		</div>
+		<!--Data de compra-->
+		<div class="box">
+			 <p class="titu">Data de compra:<span class="req">*</span></p>
+			<input type="date" name="purchasedate" id="purchasedate" size="50" required>
+		</div>
+		<!--cambio-->
+		<div class="box">
+			 <p class="titu">Cambio:<span class="req">*</span></p>
+			<input type="radio" name="cambio" id="manual"><label class="titu">Manual</label>
+			<input type="radio" name="cambio" id="automatico"><label class="titu">Automatico</label>
+		</div>
+		<!-- Opcionais-->
+		<div class="listaop">
+			<p>Opcionais:</p>
+			<ul class="opcionais">
+				<li>
+
+					<input type="checkbox" name="opcional[]" id="airbag">Airbag<!-- opcional[] é para o back end-->
+				</li>
+				<li>
+					<input type="checkbox" name="opcional" id="alarme">Alarme
+				</li>
+				<li>
+					<input type="checkbox" name="opcional" id="ar condicionado">Ar Condicionado
+				</li>
+				<li>
+					<input type="checkbox" name="opcional" id="travaele">Travas eletricas
+				</li>
+			</ul>
+		</div>
+		<div class="listaop">
+			<ul class="opcionais">
+				<li>
+					<input type="checkbox" name="opcional" id="vidroele">Vidros Eletricos
+				</li>
+				<li>
+					<input type="checkbox" name="opcional" id="som">Som
+				</li>
+				<li>
+					<input type="checkbox" name="opcional" id="Camerare">Camera de Ré
+				</li>
+				<li>
+					<input type="checkbox" name="opcional" id="Banco de couro">Banco de Couro
+				</li>
+			</ul>
+		</div>
+		<div class="imagem">
+			<label for="fotos" class="titu">Envie fotos do seu veiculo:<span class="req">*</span></label><br><br>
+			<input type="file" multiple accept="image/jpg image/png" name="fotos" required id="fotos">
+		</div>
+		<div>
+			<input class="botao" type="submit" value="Enviar">
+		</div>
+		</form>
+		<div class="forpe">
+			
+		</div>
+		
+	</div>
+</div>
+
+</body>
+</html>
